@@ -10,6 +10,9 @@
     ],
     "homepage": "https://github.com/durrbar/media-module",
     "license": "MIT",
+    "require": {
+        "spatie/laravel-medialibrary": "^11.12"
+    },
     "extra": {
         "laravel": {
             "providers": [],

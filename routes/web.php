@@ -14,6 +14,6 @@ use Modules\Media\Http\Controllers\MediaController;
 |
 */
 
-Route::group([], function () {
-    Route::resource('media', MediaController::class)->names('media');
-});
+// Route::group([], function () {
+//     Route::resource('media', MediaController::class)->names('media');
+// });
