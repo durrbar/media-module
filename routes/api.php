@@ -14,6 +14,6 @@ use Modules\Media\Http\Controllers\MediaController;
  *
 */
 
-Route::middleware(['auth:sanctum'])->prefix('v1')->group(function () {
+Route::middleware(['auth:sanctum'])->prefix('v1')->group(function (): void {
     Route::apiResource('media', MediaController::class)->names('media');
 });
