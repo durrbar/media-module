@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Modules\Media\Http\Controllers;
 
 use Illuminate\Database\Eloquent\Collection;
@@ -46,7 +48,7 @@ class AttachmentController extends CoreController
             $attachment->save();
             $attachment->addMedia($media)->toMediaCollection();
             foreach ($attachment->getMedia() as $media) {
-                if (strpos($media->mime_type, 'image/') !== false) {
+                if (mb_strpos($media->mime_type, 'image/') !== false) {
                     $converted_url = [
                         'thumbnail' => $media->getUrl('thumbnail'),
                         'original' => $media->getUrl(),

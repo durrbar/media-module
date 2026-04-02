@@ -1,19 +1,21 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Modules\Media\Models;
 
+use Illuminate\Database\Eloquent\Attributes\Table;
+use Illuminate\Database\Eloquent\Attributes\Unguarded;
 use Illuminate\Database\Eloquent\Model;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
+#[Table('attachments')]
+#[Unguarded]
 class Attachment extends Model implements HasMedia
 {
     use InteractsWithMedia;
-
-    protected $table = 'attachments';
-
-    public $guarded = [];
 
     public function registerMediaConversions(?Media $media = null): void
     {
