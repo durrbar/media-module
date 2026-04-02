@@ -12,7 +12,7 @@ class AttachmentRepository extends BaseRepository
     /**
      * Configure the Model
      **/
-    public function model()
+    public function model(): string
     {
         return Attachment::class;
     }
