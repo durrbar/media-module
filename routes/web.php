@@ -29,7 +29,7 @@ Route::apiResource('attachments', AttachmentController::class, [
  * Authorized Route for Customers only
  * ******************************************
  */
-Route::group(['middleware' => ['can:'.Permission::CUSTOMER, 'auth:sanctum', 'email.verified']], function (): void {
+Route::group(['middleware' => ['can:'.Permission::Customer->value, 'auth:sanctum', 'email.verified']], function (): void {
 
     Route::apiResource('attachments', AttachmentController::class, [
         'only' => ['store', 'update', 'destroy'],
