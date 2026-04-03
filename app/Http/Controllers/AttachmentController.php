@@ -16,12 +16,7 @@ use Prettus\Validator\Exceptions\ValidatorException;
 
 class AttachmentController extends CoreController
 {
-    public $repository;
-
-    public function __construct(AttachmentRepository $repository)
-    {
-        $this->repository = $repository;
-    }
+    public function __construct(public AttachmentRepository $repository) {}
 
     /**
      * Display a listing of the resource.
